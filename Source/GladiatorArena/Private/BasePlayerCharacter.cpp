@@ -39,3 +39,27 @@ void ABasePlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 }
 
+float ABasePlayerCharacter::GetHealth()
+{
+	return BaseAttributeSet->GetHealth();
+}
+
+float ABasePlayerCharacter::GetMaxHealth()
+{
+	return BaseAttributeSet->GetMaxHealth();
+}
+
+float ABasePlayerCharacter::GetCurrentHealthPercentage()
+{
+	return BaseAttributeSet->GetHealth() / BaseAttributeSet->GetMaxHealth();
+}
+
+float ABasePlayerCharacter::GetShieldDurability()
+{
+	return BaseAttributeSet->GetShieldDurability();
+}
+
+float ABasePlayerCharacter::GetMaxShieldDurability()
+{
+	return BaseAttributeSet->GetMaxShieldDurability();
+}

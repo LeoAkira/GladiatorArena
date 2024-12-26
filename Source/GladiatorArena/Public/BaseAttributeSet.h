@@ -29,7 +29,15 @@ public:
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, Health);
 
+	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Attributes")
+	FGameplayAttributeData MaxHealth;
+	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, MaxHealth);
+
 	UPROPERTY(BlueprintReadOnly, Replicated, Category="Attributes")
 	FGameplayAttributeData ShieldDurability;
 	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, ShieldDurability);
+
+	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Attributes")
+	FGameplayAttributeData MaxShieldDurability;
+	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, MaxShieldDurability);
 };

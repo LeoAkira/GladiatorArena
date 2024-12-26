@@ -35,4 +35,20 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	const class UBaseAttributeSet* BaseAttributeSet;
+
+public:
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	float GetHealth();
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	float GetMaxHealth();
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	float GetCurrentHealthPercentage();
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	float GetShieldDurability();
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	float GetMaxShieldDurability();
 };
