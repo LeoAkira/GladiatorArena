@@ -29,8 +29,4 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	FGameplayAttributeData ShieldDurability;
 	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, ShieldDurability);
-
-	UPROPERTY(BlueprintReadOnly)
-	FGameplayAttributeData Damage;
-	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, Damage);
 };
