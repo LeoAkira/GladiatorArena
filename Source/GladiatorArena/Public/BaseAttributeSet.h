@@ -22,11 +22,14 @@ class GLADIATORARENA_API UBaseAttributeSet : public UAttributeSet
 	GENERATED_BODY()
 	
 public:
-	UPROPERTY(BlueprintReadOnly)
+
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+	UPROPERTY(BlueprintReadOnly, Replicated, Category = "Attributes")
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, Health);
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Replicated, Category="Attributes")
 	FGameplayAttributeData ShieldDurability;
 	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, ShieldDurability);
 };
