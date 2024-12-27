@@ -18,6 +18,9 @@ void ABasePlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	BaseAttributeSet = AbilitySystemComponent->GetSet<UBaseAttributeSet>();
+
+	AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(UBaseAttributeSet::GetHealthAttribute()).AddUFunction(this, FName("OnHealthValueChanged"));
+	AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(UBaseAttributeSet::GetShieldDurabilityAttribute()).AddUFunction(this, FName("OnShieldDurabilityValueChanged"));
 }
 
 UAbilitySystemComponent* ABasePlayerCharacter::GetAbilitySystemComponent() const

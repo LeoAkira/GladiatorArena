@@ -51,4 +51,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	float GetMaxShieldDurability();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnHealthValueChanged();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnShieldDurabilityValueChanged();
 };
